@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "No Baidu Top",
+    "version": "1.0.0",
+    "description": "去除百度搜索页面右侧搜索热点.",
+    "icons": {
+        "16": "img/icon-16.png",
+        "32": "img/icon-32.png",
+        "48": "img/icon-48.png",
+        "128": "img/icon-128.png"
+    },
+
+    "content_scripts": 
+    [
+        {
+            "matches": ["*://www.baidu.com/*"],
+            "css": ["css/no_baidu_top.css"],
+            "run_at": "document_start"
+        }
+    ],
+    
+    "permissions": [
+        "tabs",
+        "http://*/",
+        "https://*/"
+    ]
+}
